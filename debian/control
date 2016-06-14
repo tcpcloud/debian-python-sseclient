@@ -1,32 +1,17 @@
-Source: sseclient
-Maintainer: Filip Pytloun <filip@pytloun.cz>
+Source: python-sseclient
 Section: python
 Priority: optional
-Build-Depends: python-setuptools (>= 0.6b3), python-all (>= 2.6.6-3), debhelper (>= 9)
-Standards-Version: 3.9.1
+Maintainer: tcpcloud Packaging Team <pkg-team@tcpcloud.eu>
+Build-Depends: python-setuptools (>= 0.6b3), python-all (>= 2.6.6-3), debhelper (>= 9), dh-python
+Standards-Version: 3.9.8
+Homepage: https://bitbucket.org/btubbs/sseclient
 
 Package: python-sseclient
 Architecture: all
+Pre-Depends: dpkg (>= 1.15.6~)
 Depends: ${misc:Depends}, ${python:Depends}
-Description: Python client library for reading Server Sent Event streams.
- =================
- Python SSE Client
- =================
- .
+Description: Python client library for reading Server Sent Event streams
  This is a Python client library for iterating over http Server Sent Event (SSE)
  streams (also known as EventSource, after the name of the Javascript interface
  inside browsers).  The SSEClient class accepts a url on init, and is then an
  iterator over messages coming from the server.
- .
- Installation
- ------------
- .
- Use pip::
- .
-     pip install sseclient
- .
- Usage
- -----
- .
- ::
-
